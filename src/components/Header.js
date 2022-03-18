@@ -79,10 +79,12 @@ function Header() {
                         </a>
 
                     </NavMenu>
-                    <UserImg onClick={signOut} src={userPhoto}/>
+                    <SignOut>
+                    <UserImg src={userPhoto}/>
                     <DropDown>
-                        <span>Sign out</span>
+                        <span onClick={signOut}>  Sign out</span>
                     </DropDown>
+                    </SignOut>
              </>
          }
 
@@ -93,13 +95,20 @@ function Header() {
 export default Header
 
 const Nav = styled.nav`
-    height: 70px;
-    background: #090b13;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:70px;
+    background-color:#090b13;
     display:flex;
-    align-items: center;
-    padding: 0 36px;
-    overflow-x:hidden;
-    `
+    justify-content:space-between;
+    align-items:center;
+    padding:0 36px;
+    letter-spacing:16px;
+    z-index: 3;
+`
+
 
 const Logo = styled.img`
         width: 80px;
@@ -200,4 +209,25 @@ const DropDown = styled.div`
     letter-spacing:3px;
     width:100px;
     opacity:0;
+`
+const SignOut = styled.div`
+position:relative;
+height:48px;
+width:48px;
+display:flex;
+cursor: pointer;
+align-items:center;
+justify-content:center;
+${UserImg}{
+    border-radius:50%;
+    width:100%;
+    height:100%;
+}
+&:hover{
+    ${DropDown}{
+        opacity:1;
+        transition-duration:1s;
+    }
+}
+
 `
