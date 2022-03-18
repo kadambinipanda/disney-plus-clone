@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/login">
+          <Route exact path="/">
               <Login />
             </Route>
           <Route path="/details/:id">

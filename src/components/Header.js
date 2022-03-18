@@ -39,7 +39,7 @@ function Header() {
     const signOut = ()=>{
         auth.signOut().then(()=>{
             dispatch(setSignOut());
-            history.push("/Login")
+            history.push("/")
         })
     }
   return (
