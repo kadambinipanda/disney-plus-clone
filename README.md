@@ -1,5 +1,5 @@
 # This is the ReactJS Disney Plus Clone
-## watch the app LIVE [here](https://disneyplus-clone-919e3.web.app)
+## Watch the app LIVE [here](https://disneyplus-clone-919e3.web.app)
 
 ## Available Scripts
 
