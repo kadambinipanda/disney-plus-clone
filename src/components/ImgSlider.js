@@ -36,6 +36,17 @@ export default ImgSlider
 
 const Carousel= styled(Slider)`
     margin-top:20px;
+    
+    & > button {
+        opacity: 0;
+        height: 100%;
+        width: 5vw;
+        z-index: 1;
+        &:hover {
+        opacity: 1;
+        transition: opacity 0.2s ease 0s;
+        }
+    }
 
     ul li button{
         &:before{

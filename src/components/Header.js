@@ -79,12 +79,7 @@ function Header() {
                         </a>
 
                     </NavMenu>
-                    <SignOut>
-                    <UserImg src={userPhoto}/>
-                    <DropDown>
-                        <span onClick={signOut}>  Sign out</span>
-                    </DropDown>
-                    </SignOut>
+                    <UserImg onClick={signOut} src={userPhoto}/>
              </>
          }
 
@@ -95,20 +90,13 @@ function Header() {
 export default Header
 
 const Nav = styled.nav`
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    height:70px;
-    background-color:#090b13;
+    height: 70px;
+    background: #090b13;
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 36px;
-    letter-spacing:16px;
-    z-index: 3;
-`
-
+    align-items: center;
+    padding: 0 36px;
+    overflow-x:hidden;
+    `
 
 const Logo = styled.img`
         width: 80px;
@@ -196,38 +184,4 @@ const LoginContainer = styled.div`
     display:flex;
     flex:1;
     justify-content:flex-end;
-`
-const DropDown = styled.div`
-    position:absolute;
-    top:48px;
-    background:rgb(19,19,19);
-    border:1px solid rgb(151,151,151,0.34);
-    border-radius:4px;
-    box-shadow:rgb(0 0 0/50%) 0px 0px 18px 0px;
-    padding:10px;
-    font-size:14px;
-    letter-spacing:3px;
-    width:100px;
-    opacity:0;
-`
-const SignOut = styled.div`
-position:relative;
-height:48px;
-width:48px;
-display:flex;
-cursor: pointer;
-align-items:center;
-justify-content:center;
-${UserImg}{
-    border-radius:50%;
-    width:100%;
-    height:100%;
-}
-&:hover{
-    ${DropDown}{
-        opacity:1;
-        transition-duration:1s;
-    }
-}
-
 `
