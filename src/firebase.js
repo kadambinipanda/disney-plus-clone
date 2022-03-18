@@ -7,13 +7,13 @@ import 'firebase/messaging';
 import 'firebase/functions'; 
 
 const firebaseConfig = {
-  apiKey: <>,
-  authDomain: <>,
-  projectId: <>,
-  storageBucket: <>,
-  messagingSenderId: <>,
-  appId: <>,
-  measurementId: <>
+  apiKey: "AIzaSyACZ-OkdDtY48xCQqofmLSERXsO0pZ0fHQ",
+  authDomain: "disneyplus-clone-919e3.firebaseapp.com",
+  projectId: "disneyplus-clone-919e3",
+  storageBucket: "disneyplus-clone-919e3.appspot.com",
+  messagingSenderId: "558402919851",
+  appId: "1:558402919851:web:f444962e96d007a333c6ee",
+  measurementId: "G-PZF2PVVBHJ"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
