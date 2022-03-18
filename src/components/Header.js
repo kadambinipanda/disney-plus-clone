@@ -79,7 +79,10 @@ function Header() {
                         </a>
 
                     </NavMenu>
-                    <UserImg onClick={signOut} src="/images/me.jpeg"/>
+                    <UserImg onClick={signOut} src={userPhoto}/>
+                    <DropDown>
+                        <span>Sign out</span>
+                    </DropDown>
              </>
          }
 
@@ -184,4 +187,17 @@ const LoginContainer = styled.div`
     display:flex;
     flex:1;
     justify-content:flex-end;
+`
+const DropDown = styled.div`
+    position:absolute;
+    top:48px;
+    background:rgb(19,19,19);
+    border:1px solid rgb(151,151,151,0.34);
+    border-radius:4px;
+    box-shadow:rgb(0 0 0/50%) 0px 0px 18px 0px;
+    padding:10px;
+    font-size:14px;
+    letter-spacing:3px;
+    width:100px;
+    opacity:0;
 `
